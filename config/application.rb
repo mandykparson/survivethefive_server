@@ -1,10 +1,16 @@
 require_relative "boot"
 
-require "rails/all"
+# require "rails/all"
+
+require 'sprockets/railtie'
+
+# require "./app/assets"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+# Bundler.require(:default, :assets, Rails.env)
+# Bundler.require *Rails.groups(:assets => %w(development test))
 
 module SurvivethefiveServer
   class Application < Rails::Application
@@ -24,7 +30,9 @@ module SurvivethefiveServer
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.assets.enabled = false
-    
+    # config.assets.enabled = false
+
+    # config.assets.compile = true
+
   end
 end
