@@ -5,6 +5,8 @@ require_relative "boot"
 require 'sprockets/railtie'
 
 require "active_storage/engine"
+require "active_mailer/engine"
+
 
 # require "./app/assets"
 
