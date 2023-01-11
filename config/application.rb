@@ -1,11 +1,11 @@
 require_relative "boot"
 
-# require "rails/all"
+require "rails/all"
 
 require 'sprockets/railtie'
 
 require "active_storage/engine"
-require "active_mailer/engine"
+require "active_mailer/railtie"
 
 
 # require "./app/assets"
